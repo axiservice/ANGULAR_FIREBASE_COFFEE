@@ -8,7 +8,7 @@ import { OrdersService } from "../shared/orders.service";
   styleUrls: ["./orders.component.scss"]
 })
 export class OrdersComponent implements OnInit {
-  constructor(private ordersService: OrdersService) {}
+  constructor(public ordersService: OrdersService) {}
 
   ngOnInit() {}
 
