@@ -13,25 +13,40 @@ export class OrdersComponent implements OnInit {
   ngOnInit() {}
 
   coffees = [
-    "Americano",
-    "Flat White",
-    "Cappuccino",
-    "Latte",
-    "Espresso",
-    "Machiato",
-    "Mocha",
-    "Hot Chocolate",
-    "Tea"
+    {"QT":1,"NA":"Americano"},
+    {"QT":2,"NA":"Flat White"},
+    {"QT":3,"NA":"Cappuccino"},
+    {"QT":4,"NA":"Latte"},
+    {"QT":5,"NA":"Espresso"},
+    {"QT":6,"NA":"Machiato"},
+    {"QT":7,"NA":"Mocha"},
+    {"QT":8,"NA":"Hot Choc"},
+    {"QT":9,"NA":"Tea"}
   ];
 
   coffeeOrder = [];
+  countElemento = 0;
 
-  addCoffee = coffee => this.coffeeOrder.push(coffee);
+  addCoffee = coffee => {
+    //this.coffeeOrder.push(coffee);
+    this.coffeeOrder.push({"id":++this.countElemento,"item":coffee});
+  }
 
   removeCoffee = coffee => {
     let index = this.coffeeOrder.indexOf(coffee);
     if (index > -1) this.coffeeOrder.splice(index, 1);
   };
+
+  plusCoffee = coffee => {
+   this.coffeeOrder.forEach(function(i){
+      if(i.id===coffee.id){i.item.QT++;}
+    });
+  };
+
+  plusCoffee2 = coffee => {
+    coffee.item.QT++;
+  };
+
 
   onSubmit() {
     this.ordersService.form.value.coffeeOrder = this.coffeeOrder;

@@ -15,7 +15,7 @@
       <td>{{ order.payload.doc.data().customerName }}</td>
       <td>
         <span *ngFor="let coffee of order.payload.doc.data().coffeeOrder">
-          {{ coffee }}
+          [{{ coffee.id }}] {{ coffee.item.QT }} {{ coffee.item.NA }}
         </span>
       </td>
       <td

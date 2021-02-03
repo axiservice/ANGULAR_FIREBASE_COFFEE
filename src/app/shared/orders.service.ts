@@ -19,7 +19,7 @@ export class OrdersService {
   createCoffeeOrder(data) {
     return new Promise<any>((resolve, reject) => {
       this.firestore
-        .collection("coffeeOrders")
+        .collection("coffeeOrders2")
         .add(data)
         .then(res => {}, err => reject(err));
     });
@@ -33,7 +33,7 @@ export class OrdersService {
   }
 
   getCoffeeOrders() {
-    return this.firestore.collection("coffeeOrders").snapshotChanges();
+    return this.firestore.collection("coffeeOrders2").snapshotChanges();
   }
 
   deleteCoffeeOrder(data) {

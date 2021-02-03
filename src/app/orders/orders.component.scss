@@ -1,0 +1,20 @@
+ /* Define standard variables and values for website */
+ $bgcolor: lightblue;
+ $textcolor: rgb(90, 90, 173);
+ $textcolor2: rgb(180, 70, 122);
+ $fontsize: 18px;
+ 
+ .myBtn {
+	padding:10px 20px;
+	display:inline-block;
+	border-radius:8px;
+	background: $textcolor;
+	font-size:12px;
+	color:rgb(255, 255, 255);
+}
+
+.myBtn.large {
+	padding:20px 30px;
+    font-size:22px;
+    background: $textcolor2;
+}
