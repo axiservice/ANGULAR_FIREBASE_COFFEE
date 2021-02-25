@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0afd3999-f69a-43d4-9295-8fa912a60775/deploy-status)](https://app.netlify.com/sites/angular-firebase-prova-001/deploys)
+
 # ArtCoffee
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
